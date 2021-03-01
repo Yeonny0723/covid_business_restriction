@@ -4,7 +4,8 @@
   "description": "Covid Business Restriction",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "C:/Users/USER/AppData/Local/Microsoft/WindowsApps/python.exe c:/PROJECT/코로나업종제한/covidBusinessRestriction/main.py"
   },
   "repository": {
     "type": "git",
