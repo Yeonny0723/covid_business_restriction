@@ -1,3 +1,5 @@
+# coding=utf8
+
 from flask import Flask, render_template, request, redirect
 import pandas as pd
 app = Flask("Covid_business_restriction")
