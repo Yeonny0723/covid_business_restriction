@@ -1,0 +1,164 @@
+body {
+  width: 100%;
+  height: 180vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2vh;
+}
+.insidebox {
+  width: 60%;
+  background-color: #f5f6fa;
+  position: absolute;
+  top: 35%;
+  z-index: 10;
+  border-radius: 20px;
+  padding: 1% 4%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0vh 0vh 2vh rgb(0 0 0 / 30%);
+}
+h2 {
+  text-align: center;
+}
+
+/* 모바일폰 */
+@media (max-width: 767px) {
+  .content {
+    right: 13% !important;
+    height: 40% !important;
+  }
+  body {
+    font-size: 0.5rem;
+  }
+}
+
+/* 태블릿 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .insidebox {
+    width: 80%;
+  }
+  .content {
+    right: 15% !important;
+    height: 35% !important;
+  }
+}
+
+.title_content {
+  line-height: 8vh;
+}
+
+.headbackground {
+  width: 100%;
+  height: 40%;
+  background-color: #2f3640;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  vertical-align: center;
+}
+.title_content {
+  margin-top: 60px;
+}
+.title {
+  color: white;
+}
+
+.business-container > input {
+  border: none;
+  width: 30%;
+  height: 5rem;
+  border-radius: 5px;
+  background: rgba(241, 196, 15, 0.3);
+  color: whit !important;
+}
+.business-container {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+}
+
+.distancing-container {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.distancing-container > input {
+  width: 20%;
+  height: 100%;
+  margin: 0.3%;
+  border: none;
+  border-radius: 5px;
+  background: rgba(52, 152, 219, 0.3);
+}
+
+.clicked-level {
+  background: rgb(52, 152, 219) !important;
+}
+.clicked-business {
+  background: rgb(241, 196, 15) !important;
+}
+
+label {
+  display: block;
+  text-align: center;
+  margin: 1vh 0;
+  color: tomato;
+  /* font-size: 0.8rem; */
+  line-height: 1.5rem;
+}
+form {
+  text-align: center;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 20;
+  display: none;
+}
+
+.content {
+  position: absolute;
+  top: 45%;
+  right: 17%;
+  z-index: 30;
+  background: white;
+  width: 60%;
+  height: 30%;
+  padding: 4vh;
+  transform: scale(0);
+}
+
+#form {
+  display: none;
+}
+.close-btn {
+  font-size: 5vh;
+  cursor: pointer;
+}
+
+.active > .overlay {
+  display: block;
+}
+
+.active > .content {
+  transform: scale(1);
+  transition: all 100ms ease-in-out;
+}
+
+li {
+  line-height: 2rem;
+}
+footer {
+  position: absolute;
+  bottom: 5%;
+}

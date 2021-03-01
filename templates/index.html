@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Covid Business Restriction by Social Distancing</title>
+    <link rel="stylesheet" href="../static/style.css?after" type="text/css" />
+    <link rel="stylesheet" href="../static/reset.css?after" type="text/css" />
+  </head>
+
+  <body>
+    <div class="headbackground">
+      <div class="title">
+        <h1 class="title_content">
+          사회적 거리두기 <br />
+          단계별 제한 업종
+        </h1>
+        <span class="lastUpate">
+          개편기준: 11.7~ <br /><br />
+          마지막 업데이트: 2021.02.23
+        </span>
+      </div>
+    </div>
+    <div class="insidebox">
+      <label id="level_label" for="levels"
+        >거리두기 단계 현황을 클릭해주세요.</label
+      >
+      <div class="distancing-container" id="levels">
+        {% for level in levels %}
+        <input type="button" value="{{level}}" name="level" />
+        {% endfor %}
+      </div>
+      <label id="label_business" for="businesses"> 업종을 선택해주세요. </label>
+      <div class="business-container" id="businesses">
+        {% for type in types %}
+        <input type="button" value="{{type}}" name="business" />
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox"></div>
+
+    <form id="form" action="/" method="post" name="form">
+      <input id="level" type="text" name="level" value="null" />
+      <input id="business" type="text" name="business" value="null" />
+    </form>
+    <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="popupContent()">&times;</div>
+        <h2>사회적 거리두기 {{ currentLevel }} {{ currentBusiness}}</h2>
+        <ul>
+          <li>
+            *5인이상 사설 집합 금지
+            <a href="http://www.kukinews.com/newsView/kuk202102260224"
+              >(확인하러 가기)</a
+            >
+          </li>
+          {% for content in message %}
+          <li>{{content}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <script src="../static/script.js"></script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script
+      type="text/javascript"
+      src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6020c204966c4c2b"
+    ></script>
+  </body>
+  <footer>
+    출처:
+    <span>
+      <a
+        href="http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&brdGubun=65&dataGubun=651"
+        >ncov.mohw.go.k</a
+      >
+    </span>
+    <span>
+      <a href="https://news.seoul.go.kr/welfare/archives/524124#scrap"
+        >서울특별시</a
+      >
+    </span>
+  </footer>
+</html>
