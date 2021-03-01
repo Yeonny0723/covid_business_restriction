@@ -37,3 +37,10 @@ const popupContent = () => {
 };
 
 popupContent();
+
+// if (
+//   document.getElementsByTagName("h2").innerText ==
+//   "사회적 거리두기 2단계 식당/카페"
+// ) {
+//   document.querySelector(".content").style.height = "50% !important";
+// }
